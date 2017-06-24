@@ -531,27 +531,27 @@
                   <stringProp name="RegexExtractor.match_number"></stringProp>
                 </RegexExtractor>
                 <hashTree/>
+                <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="false">
+                  <stringProp name="HtmlExtractor.refname">highlander_comm</stringProp>
+                  <stringProp name="HtmlExtractor.expr">input[name=&apos;highlander_comment_nonce&apos;]</stringProp>
+                  <stringProp name="HtmlExtractor.attribute">value</stringProp>
+                  <stringProp name="HtmlExtractor.default">err</stringProp>
+                  <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+                  <stringProp name="HtmlExtractor.match_number">1</stringProp>
+                  <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
+                </HtmlExtractor>
+                <hashTree/>
+                <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="false">
+                  <stringProp name="HtmlExtractor.refname">akismet_comm</stringProp>
+                  <stringProp name="HtmlExtractor.expr">input[name=&apos;akismet_comment_nonce&apos;]</stringProp>
+                  <stringProp name="HtmlExtractor.attribute">value</stringProp>
+                  <stringProp name="HtmlExtractor.default">err</stringProp>
+                  <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+                  <stringProp name="HtmlExtractor.match_number">1</stringProp>
+                  <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
+                </HtmlExtractor>
+                <hashTree/>
               </hashTree>
-              <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="false">
-                <stringProp name="HtmlExtractor.refname">highlander_comm</stringProp>
-                <stringProp name="HtmlExtractor.expr">input[name=&apos;highlander_comment_nonce&apos;]</stringProp>
-                <stringProp name="HtmlExtractor.attribute">value</stringProp>
-                <stringProp name="HtmlExtractor.default">err</stringProp>
-                <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
-                <stringProp name="HtmlExtractor.match_number">1</stringProp>
-                <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
-              </HtmlExtractor>
-              <hashTree/>
-              <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="false">
-                <stringProp name="HtmlExtractor.refname">akismet_comm</stringProp>
-                <stringProp name="HtmlExtractor.expr">input[name=&apos;akismet_comment_nonce&apos;]</stringProp>
-                <stringProp name="HtmlExtractor.attribute">value</stringProp>
-                <stringProp name="HtmlExtractor.default">err</stringProp>
-                <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
-                <stringProp name="HtmlExtractor.match_number">1</stringProp>
-                <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
-              </HtmlExtractor>
-              <hashTree/>
               <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="comment" enabled="false">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="highlander_comm" elementType="Argument">
