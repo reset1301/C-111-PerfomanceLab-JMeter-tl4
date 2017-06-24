@@ -33,7 +33,7 @@
           <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
         </CookieManager>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
           <stringProp name="ConstantTimer.delay">1000</stringProp>
         </ConstantTimer>
         <hashTree/>
@@ -513,8 +513,26 @@
                   </collectionProp>
                 </HeaderManager>
                 <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">highlander_comm</stringProp>
+                  <stringProp name="RegexExtractor.regex">id=&quot;highlander_comment_nonce&quot; name=&quot;highlander_comment_nonce&quot; value=&quot;(.+?)&quot; /&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">err</stringProp>
+                  <stringProp name="RegexExtractor.match_number"></stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">akismet_comm</stringProp>
+                  <stringProp name="RegexExtractor.regex">id=&quot;akismet_comment_nonce&quot; name=&quot;akismet_comment_nonce&quot; value=&quot;(.+?)&quot; /&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">err</stringProp>
+                  <stringProp name="RegexExtractor.match_number"></stringProp>
+                </RegexExtractor>
+                <hashTree/>
               </hashTree>
-              <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="true">
+              <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="false">
                 <stringProp name="HtmlExtractor.refname">highlander_comm</stringProp>
                 <stringProp name="HtmlExtractor.expr">input[name=&apos;highlander_comment_nonce&apos;]</stringProp>
                 <stringProp name="HtmlExtractor.attribute">value</stringProp>
@@ -524,7 +542,7 @@
                 <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
               </HtmlExtractor>
               <hashTree/>
-              <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="true">
+              <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS/JQuery Extractor" enabled="false">
                 <stringProp name="HtmlExtractor.refname">akismet_comm</stringProp>
                 <stringProp name="HtmlExtractor.expr">input[name=&apos;akismet_comment_nonce&apos;]</stringProp>
                 <stringProp name="HtmlExtractor.attribute">value</stringProp>
@@ -533,6 +551,21 @@
                 <stringProp name="HtmlExtractor.match_number">1</stringProp>
                 <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
               </HtmlExtractor>
+              <hashTree/>
+              <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="comment" enabled="false">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="highlander_comm" elementType="Argument">
+                    <stringProp name="Argument.name">highlander_comm</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="akismet_comm" elementType="Argument">
+                    <stringProp name="Argument.name">akismet_comm</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </Arguments>
               <hashTree/>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="17 /b" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -730,21 +763,6 @@
               <boolProp name="TransactionController.parent">false</boolProp>
             </TransactionController>
             <hashTree>
-              <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="comment" enabled="false">
-                <collectionProp name="Arguments.arguments">
-                  <elementProp name="comm" elementType="Argument">
-                    <stringProp name="Argument.name">comm</stringProp>
-                    <stringProp name="Argument.value"></stringProp>
-                    <stringProp name="Argument.metadata">=</stringProp>
-                  </elementProp>
-                  <elementProp name="commen" elementType="Argument">
-                    <stringProp name="Argument.name">commen</stringProp>
-                    <stringProp name="Argument.value"></stringProp>
-                    <stringProp name="Argument.metadata">=</stringProp>
-                  </elementProp>
-                </collectionProp>
-              </Arguments>
-              <hashTree/>
               <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="email_unreg" enabled="false">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="mail" elementType="Argument">
